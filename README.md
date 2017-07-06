@@ -15,7 +15,7 @@ Finally , a separate thread manages the Job lifecycle by constantly checking for
 --mainserver.py  -  Contains the class Server which contains defined http methods - get, put, delete , post as per requirements in assignment. All the datastructures for creating managing the jobs lifecycle are also here
 Inside __name__==__main__ : code for testing and debugging the http functions exists
 
- 	--server.py - hosts the server on localhost and contains multhreaded functions for hosting the server and simultaneously manage the job life cycle like changing from running to successful after job completion .
+ -server.py - hosts the server on localhost and contains multhreaded functions for hosting the server and simultaneously manage the job life cycle like changing from running to successful after job completion .
 
 -client.py - sends request to the server via the network and seeks response from the server
 
