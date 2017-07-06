@@ -1,0 +1,118 @@
+OUTPUT FOR TESTING PUT AND GET METHODS
+
+
+
+Server Terminal : run dserver.py
+
+Server Terminal : run dclient.py
+Enter Server Specification
+N (max no. of running jobs): 5
+Time per job : 10
+starting up on localhost port 10023
+waiting for a connection
+connection from ('127.0.0.1', 37600)
+
+
+Client Terminal: run dclient.py
+
+Enter correct url for server in form -  http://serveraddress:port/
+eg. http://localhost:100014/ : http://localhost:10022/ 
+
+connecting to localhost port 10022
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 3 job status = RUNNING"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : GET /job/<3>
+sending request "GET /job/<3>"
+received response "STATUS 200  job id = 3 job status = RUNNING"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : GET /job/<3>
+sending request "GET /job/<3>"
+received response "STATUS 200  job id = 3 job status = SUCCESSFUL"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 96 job status = RUNNING"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 40 job status = RUNNING"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 55 job status = RUNNING"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : PUT /job
+
+sending request "PUT /job"
+received response "STATUS 200  job id = 16 job status = RUNNING"
+closing socket
+connecting to localhost port 10022
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 22 job status = QUEUED"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 78 job status = QUEUED"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : PUT /job
+
+sending request "PUT /job"
+received response "STATUS 200  job id = 8 job status = QUEUED"
+closing socket
+connecting to localhost port 10022
+Enter the http request uri : PUT /job
+
+sending request "PUT /job"
+received response "STATUS 200  job id = 79 job status = QUEUED"
+closing socket
+connecting to localhost port 10022
+Enter the http request uri : PUT /job
+
+sending request "PUT /job"
+received response "STATUS 200  job id = 63 job status = QUEUED"
+closing socket
+connecting to localhost port 10022
+Enter the http request uri : GET /job/<79>
+
+sending request "GET /job/<79>"
+received response "STATUS 200  job id = 79 job status = QUEUED"
+closing socket
+connecting to localhost port 10022
+Enter the http request uri : GET /job/<2>
+sending request "GET /job/<2>"
+received response "STATUS 404  job id = None job status = None"
+closing socket
+connecting to localhost port 10022
+
+Enter the http request uri : GET /job/<22>
+
+sending request "GET /job/<22>"
+received response "STATUS 200  job id = 22 job status = SUCCESSFUL"
+closing socket
+connecting to localhost port 10022
+Enter the http request uri : GET /job/<79>
+
+sending request "GET /job/<79>"
+received response "STATUS 200  job id = 79 job status = SUCCESSFUL"
+closing socket
+connecting to localhost port 10022
+

@@ -1,0 +1,63 @@
+OUTPUT FOR POST - Pause and POST - Resume method
+
+Server Terminal : run dclient.py
+
+Enter Server Specification
+N (max no. of running jobs): 4
+Time per job : 22
+starting up on localhost port 10024
+waiting for a connection
+connection from ('127.0.0.1', 37600)
+
+
+
+Client terminal : run dclient.py
+
+Enter correct url for server in form -  http://serveraddress:port/
+eg. http://localhost:100014/ : http://localhost:10024/ 
+
+connecting to localhost port 10024
+
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 86 job status = RUNNING"
+closing socket
+connecting to localhost port 10024
+
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 13 job status = QUEUED"
+closing socket
+connecting to localhost port 10024
+
+Enter the http request uri : PUT /job
+
+sending request "PUT /job"
+received response "STATUS 200  job id = 56 job status = QUEUED"
+closing socket
+connecting to localhost port 10024
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 26 job status = QUEUED"
+closing socket
+connecting to localhost port 10024
+
+Enter the http request uri : POST /job/<86>/<pause>
+sending request "POST /job/<86>/<pause>"
+received response "STATUS 200  job id = 86 job status = PAUSED"
+closing socket
+connecting to localhost port 10024
+
+Enter the http request uri : POST /job/<86>/<resume>
+sending request "POST /job/<86>/<resume>"
+received response "STATUS 200  job id = 86 job status = RUNNING"
+closing socket
+connecting to localhost port 10024
+
+Enter the http request uri : GET /job/<86>
+
+sending request "GET /job/<86>"
+received response "STATUS 200  job id = 86 job status = SUCCESSFUL"
+closing socket
+connecting to localhost port 10024
+Enter the http request uri : 

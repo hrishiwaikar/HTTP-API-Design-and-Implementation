@@ -1,0 +1,74 @@
+OUTPUT FOR TESTING DELETE METHOD
+
+Server Terminal : run dclient.py
+
+Enter Server Specification
+N (max no. of running jobs): 3
+Time per job : 15
+starting up on localhost port 10023
+waiting for a connection
+connection from ('127.0.0.1', 37600)
+
+
+
+Client terminal : run dclient.py
+
+Enter correct url for server in form -  http://serveraddress:port/
+eg. http://localhost:100014/ : http://localhost:10023/ 
+connecting to localhost port 10023
+connecting to localhost port 10023
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+
+received response "STATUS 200  job id = 9 job status = RUNNING"
+closing socket
+connecting to localhost port 10023
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 49 job status = RUNNING"
+closing socket
+connecting to localhost port 10023
+
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 48 job status = RUNNING"
+closing socket
+connecting to localhost port 10023
+
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 58 job status = QUEUED"
+closing socket
+connecting to localhost port 10023
+
+Enter the http request uri : PUT /job
+
+sending request "PUT /job"
+received response "STATUS 200  job id = 71 job status = QUEUED"
+closing socket
+connecting to localhost port 10023
+Enter the http request uri : PUT /job
+sending request "PUT /job"
+received response "STATUS 200  job id = 25 job status = QUEUED"
+closing socket
+connecting to localhost port 10023
+
+Enter the http request uri : DELETE /job/<9>
+
+sending request "DELETE /job/<9>"
+received response "STATUS 200  job id = 9 job status = DELETED"
+closing socket
+connecting to localhost port 10023
+Enter the http request uri : DELETE /job/<49>
+
+sending request "DELETE /job/<49>"
+received response "STATUS 403  job id = 49 job status = SUCCESSFUL"
+closing socket
+connecting to localhost port 10023
+Enter the http request uri : DELETE /job/<25>
+sending request "DELETE /job/<25>"
+received response "STATUS 200  job id = 25 job status = DELETED"
+closing socket
+connecting to localhost port 10023
+
+
