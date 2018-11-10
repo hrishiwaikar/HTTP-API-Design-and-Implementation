@@ -1,13 +1,13 @@
 # HTTP-API-Design-and-Implementation
-Wrote the HTTP protocol from scratch and designed and implemented it as an api in a Client Server Architecture
+Wrote the HTTP protocol from scratch implemented it in a Client Server Architecture
 
 
-I have implemented the http protocol from scratch .  I have simulated the use of the api by building client-server architecture , where in the client  sends http request (eg PUT /job) to the server using tcp socket library . The server manages certiain jobs and their lifecycle using multithreading.
+I have written the http protocol from scratch.  I have simulated the use of the api by building client-server architecture , where in the client sends http request (eg PUT /job) to the server using tcp socket library . The server manages certiain jobs and their lifecycle using multithreading.
 
 The server receives the request and based on it calls corresponding method PUT/DELETE/POST/GET which are defined inside the Server class in mainserver module.
 The generated response by the method is sent back to the client . (Note: client and server are run on two different terminals)
 
-Finally , a separate thread manages the Job lifecycle by constantly checking for change of state of running threads and transferring jobs from queue to running state.
+Finally, a separate thread manages the Job lifecycle by constantly checking for change of state of running threads and transferring jobs from queue to running state.
 
 
 1. There are three modules - mainserver.py , server.py and client.py
